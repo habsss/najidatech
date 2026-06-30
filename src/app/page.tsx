@@ -158,30 +158,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-center mb-4">Our Services</h2>
-        <p className="text-center text-gray-400 mb-12">
-          Complete technology and security solutions.
-        </p>
+      <section id="services" className="max-w-7xl mx-auto px-6 py-20">
+  <h2 className="text-4xl font-bold text-center mb-4">
+    Our Services
+  </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <div
-              key={service}
-              className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-purple-500 hover:shadow-[0_0_25px_rgba(168,85,247,0.25)] transition"
-            >
-              <h3 className="text-xl font-semibold">{service}</h3>
-            </div>
-          ))}
-        </div>
+  <p className="text-center text-gray-400 mb-12">
+    Complete technology and security solutions.
+  </p>
 
-        <div className="text-center mt-12">
-          <a href="/services" className={premiumButton}>
-            View All Services
-          </a>
-        </div>
-      </section>
-
+  <div className="text-center">
+    <a href="/services" className={premiumButton}>
+      View All Services
+    </a>
+  </div>
+</section>
       <section className="max-w-7xl mx-auto px-6 py-20 text-center">
         <h2 className="text-4xl font-bold mb-4">Featured Products</h2>
 
