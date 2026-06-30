@@ -13,99 +13,12 @@ export default function Home() {
     "relative inline-block overflow-hidden rounded-xl px-7 py-3 font-semibold text-purple-300 border border-purple-500/70 transition hover:scale-105 hover:text-white hover:shadow-[0_0_25px_rgba(168,85,247,0.35)] before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-purple-400/30 before:to-transparent before:transition before:duration-700 hover:before:translate-x-full";
 
   const services = [
-    {
-      icon: "📹",
-      title: "CCTV Systems",
-      desc: "Professional surveillance systems with remote viewing, recording and intelligent monitoring.",
-    },
-    {
-      icon: "🔐",
-      title: "Access Control",
-      desc: "Card, biometric, keypad and mobile access solutions for homes and businesses.",
-    },
-    {
-      icon: "🚨",
-      title: "Fire & Burglar Alarms",
-      desc: "Reliable detection and notification systems designed to protect people and property.",
-    },
-    {
-      icon: "🚪",
-      title: "Automatic Gates",
-      desc: "Sliding and swing gate automation solutions with remote and smartphone control.",
-    },
-    {
-      icon: "🌐",
-      title: "Networking & Managed Wi-Fi",
-      desc: "Enterprise networking, structured cabling, wireless bridges, VLANs and managed Wi-Fi.",
-    },
-    {
-      icon: "☎️",
-      title: "PBX Phone Systems",
-      desc: "Business phone systems, IVRs, call recording, extensions and remote communications.",
-    },
-  ];
-
-  const products = [
-    {
-      name: "Smart Wi-Fi Relay",
-      price: "TT$150",
-      image: "/products/smart-wifi-relay.jpg",
-      desc: "Smart relay module for controlling gates, lights, pumps and other devices remotely.",
-    },
-    {
-      name: "7-Day Timer Relay",
-      price: "TT$150",
-      image: "/products/timer-relay.jpg",
-      desc: "Programmable timer relay for scheduling lights, pumps, signage and equipment.",
-    },
-    {
-      name: "Reflective Photocell",
-      price: "TT$585",
-      image: "/products/reflective-photocell.jpg",
-      desc: "Long-range reflective sensor for automatic gates, barriers and vehicle detection.",
-    },
-    {
-      name: "Tone & Probe Cable Tester",
-      price: "TT$435",
-      image: "/products/tone-probe.jpg",
-      desc: "Cable tracing tool for network, telephone and low-voltage installations.",
-    },
-    {
-      name: "Universal Rolling Code Remote",
-      price: "TT$200",
-      image: "/products/universal-remote.jpg",
-      desc: "Slim 4-button universal remote for compatible gate and garage automation systems.",
-    },
-    {
-      name: "BFT 4-Button Remote",
-      price: "TT$200",
-      image: "/products/bft-4-button-remote.jpeg",
-      desc: "Replacement remote for compatible BFT automatic gate systems.",
-    },
-    {
-      name: "BFT 2-Button Remote",
-      price: "TT$200",
-      image: "/products/bft-2-button-remote.jpg",
-      desc: "Compact 2-button replacement remote for compatible BFT gate systems.",
-    },
-    {
-      name: "RJ45 Pass-Through Connectors",
-      price: "TT$100",
-      image: "/products/rj45-pass-through.jpg",
-      desc: "Pass-through RJ45 connectors for Cat5e/Cat6 network cable terminations.",
-    },
-    {
-      name: "Pass-Through Crimper",
-      price: "TT$250",
-      image: "/products/pass-through-crimper.jpg",
-      desc: "Professional crimping tool for RJ45 pass-through connectors.",
-    },
-    {
-      name: "Digital Caliper",
-      price: "TT$150",
-      image: "/products/digital-caliper.jpg",
-      desc: "Digital measuring tool for technical, electronic and installation work.",
-    },
+    "CCTV Systems",
+    "Access Control",
+    "Fire & Burglar Alarms",
+    "Automatic Gates",
+    "Networking & Managed Wi-Fi",
+    "PBX Phone Systems",
   ];
 
   return (
@@ -125,13 +38,13 @@ export default function Home() {
           </div>
 
           <div className="hidden md:flex items-center gap-10 text-sm font-medium">
-            <a href="#services" className="hover:text-purple-400 transition">
+            <a href="/services" className="hover:text-purple-400 transition">
               Services
             </a>
-            <a href="#products" className="hover:text-purple-400 transition">
+            <a href="/products" className="hover:text-purple-400 transition">
               Products
             </a>
-            <a href="#about" className="hover:text-purple-400 transition">
+            <a href="/about" className="hover:text-purple-400 transition">
               About
             </a>
             <a href="#contact" className="hover:text-purple-400 transition">
@@ -160,16 +73,18 @@ export default function Home() {
 
         {menuOpen && (
           <div className="md:hidden border-t border-zinc-800 bg-black px-6 py-5 space-y-4">
-            {["services", "products", "about", "contact"].map((item) => (
-              <a
-                key={item}
-                onClick={() => setMenuOpen(false)}
-                href={`#${item}`}
-                className="block capitalize hover:text-purple-400"
-              >
-                {item}
-              </a>
-            ))}
+            <a onClick={() => setMenuOpen(false)} href="/services" className="block hover:text-purple-400">
+              Services
+            </a>
+            <a onClick={() => setMenuOpen(false)} href="/products" className="block hover:text-purple-400">
+              Products
+            </a>
+            <a onClick={() => setMenuOpen(false)} href="/about" className="block hover:text-purple-400">
+              About
+            </a>
+            <a onClick={() => setMenuOpen(false)} href="#contact" className="block hover:text-purple-400">
+              Contact
+            </a>
 
             <a
               href="https://wa.me/18683522817"
@@ -243,7 +158,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="max-w-7xl mx-auto px-6 py-20">
+      <section className="max-w-7xl mx-auto px-6 py-20">
         <h2 className="text-4xl font-bold text-center mb-4">Our Services</h2>
         <p className="text-center text-gray-400 mb-12">
           Complete technology and security solutions.
@@ -252,67 +167,34 @@ export default function Home() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div
-              key={service.title}
-              className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-purple-500 hover:shadow-[0_0_25px_rgba(168,85,247,0.25)] transition duration-300"
+              key={service}
+              className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8 hover:border-purple-500 hover:shadow-[0_0_25px_rgba(168,85,247,0.25)] transition"
             >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-gray-400 leading-relaxed">{service.desc}</p>
+              <h3 className="text-xl font-semibold">{service}</h3>
             </div>
           ))}
         </div>
+
+        <div className="text-center mt-12">
+          <a href="/services" className={premiumButton}>
+            View All Services
+          </a>
+        </div>
       </section>
 
-      <section id="products" className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-center mb-4">
-          Featured Products
-        </h2>
-        <p className="text-center text-gray-400 mb-12">
-          Quality tools, remotes, automation and networking accessories
-          available from Najida Tech.
+      <section className="max-w-7xl mx-auto px-6 py-20 text-center">
+        <h2 className="text-4xl font-bold mb-4">Featured Products</h2>
+
+        <p className="text-gray-400 mb-10">
+          Explore our range of networking, automation and security products.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product) => (
-            <div
-              key={product.name}
-              className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden hover:border-purple-500 hover:shadow-[0_0_25px_rgba(168,85,247,0.25)] transition"
-            >
-              <div className="bg-white h-56 flex items-center justify-center p-4">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={300}
-                  height={220}
-                  className="max-h-48 w-auto object-contain"
-                />
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                  {product.desc}
-                </p>
-                <p className="text-2xl font-bold text-purple-400 mb-5">
-                  {product.price}
-                </p>
-
-                <a
-                  href={`https://wa.me/18683522817?text=Hi%20Najida%20Tech,%20I'm%20interested%20in%20the%20${encodeURIComponent(
-                    product.name
-                  )}`}
-                  target="_blank"
-                  className={outlineButton}
-                >
-                  Order on WhatsApp
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
+        <a href="/products" className={premiumButton}>
+          View All Products
+        </a>
       </section>
 
-      <section id="about" className="max-w-7xl mx-auto px-6 py-20">
+      <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold mb-6">
@@ -320,47 +202,31 @@ export default function Home() {
             </h2>
 
             <p className="text-gray-400 leading-relaxed mb-8">
-              Najida Tech provides professional security, networking,
-              telecommunications and automation solutions throughout Trinidad &
-              Tobago. With over 10 years of industry experience, we deliver
-              reliable installations, responsive support and quality products
-              for residential and commercial clients.
+              With over 10 years of industry experience, Najida Tech provides
+              professional security, networking, telecommunications and automation
+              solutions throughout Trinidad & Tobago.
             </p>
 
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                ["10+", "Years Experience"],
-                ["100+", "Projects Completed"],
-                ["Reliable", "After-Sales Support"],
-                ["T&T", "Nationwide Service"],
-              ].map(([value, label]) => (
-                <div
-                  key={label}
-                  className="bg-zinc-900 border border-zinc-800 rounded-xl p-5"
-                >
-                  <h3 className="text-3xl font-bold text-purple-400">
-                    {value}
-                  </h3>
-                  <p className="text-gray-400">{label}</p>
-                </div>
-              ))}
-            </div>
+            <a href="/about" className={outlineButton}>
+              Learn More About Us
+            </a>
           </div>
 
-          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10">
-            <h3 className="text-2xl font-bold mb-6 text-purple-400">
-              Our Expertise
-            </h3>
-
-            <ul className="space-y-4 text-gray-300">
-              <li>✓ CCTV & Video Surveillance</li>
-              <li>✓ Access Control Systems</li>
-              <li>✓ Fire & Burglar Alarm Systems</li>
-              <li>✓ Networking & Managed Wi-Fi</li>
-              <li>✓ PBX & VoIP Phone Systems</li>
-              <li>✓ Automatic Gates & Automation</li>
-              <li>✓ IT Support & Infrastructure</li>
-            </ul>
+          <div className="grid grid-cols-2 gap-4">
+            {[
+              ["10+", "Years Experience"],
+              ["100+", "Projects Completed"],
+              ["Reliable", "After-Sales Support"],
+              ["T&T", "Nationwide Service"],
+            ].map(([value, label]) => (
+              <div
+                key={label}
+                className="bg-zinc-900 border border-zinc-800 rounded-xl p-5"
+              >
+                <h3 className="text-3xl font-bold text-purple-400">{value}</h3>
+                <p className="text-gray-400">{label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
