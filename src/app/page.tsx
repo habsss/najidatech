@@ -162,10 +162,10 @@ export default function Home() {
             width={500}
             height={700}
             priority
-            quality={100-75}
             unoptimized
             className="w-auto max-h-[720px] object-contain drop-shadow-[0_0_55px_rgba(168,85,247,0.5)]"
           />
+          </div>
         </div>
       </section>
 
