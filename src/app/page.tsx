@@ -155,7 +155,7 @@ export default function Home() {
   </div>
 </div>
 
-        <div className="flex justify-center lg:justify-end items-end h-full">
+        <div className="flex justify-center lg:justify-center items-center h-full">
           <Image
             src="/mascot.png"
             alt="Najida Tech Mascot"
