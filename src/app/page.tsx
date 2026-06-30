@@ -138,12 +138,22 @@ export default function Home() {
           </p>
 
           <div className="flex flex-wrap gap-5 mt-9">
-            <a href="#contact" className={'${premiumButton}float-button-1'}>Get A Quote</a>
-            <a href="https://wa.me/18683522817" target="_blank" className={'${outlineButton}float-button-2'}>
-              WhatsApp Us
-            </a>
-          </div>
-        </div>
+  <div className="float-button-1">
+    <a href="#contact" className={premiumButton}>
+      Get A Quote
+    </a>
+  </div>
+
+  <div className="float-button-2">
+    <a
+      href="https://wa.me/18683522817"
+      target="_blank"
+      className={outlineButton}
+    >
+      WhatsApp Us
+    </a>
+  </div>
+</div>
 
         <div className="flex justify-center lg:justify-end items-end h-full">
           <Image
