@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes floatLogo {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.float-logo {
+  animation: floatLogo 3s ease-in-out infinite;
+}
+
+.float-button-1 {
+  animation: floatLogo 4s ease-in-out infinite;
+}
+
+.float-button-2 {
+  animation: floatLogo 4s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.float-mascot {
+  animation: floatLogo 6s ease-in-out infinite;
+}

@@ -56,7 +56,7 @@ export default function Home() {
         width={100}
         height={100}
         priority
-        className="relative h-16 md:h-20 w-auto object-contain"
+        className="relative h-16 md:h-20 w-auto object-contain float-logo"
       />
     </div>
 
@@ -138,8 +138,8 @@ export default function Home() {
           </p>
 
           <div className="flex flex-wrap gap-5 mt-9">
-            <a href="#contact" className={premiumButton}>Get A Quote</a>
-            <a href="https://wa.me/18683522817" target="_blank" className={outlineButton}>
+            <a href="#contact" className={'${premiumButton}float-button-1'}>Get A Quote</a>
+            <a href="https://wa.me/18683522817" target="_blank" className={'${outlineButton}float-button-2'}>
               WhatsApp Us
             </a>
           </div>
